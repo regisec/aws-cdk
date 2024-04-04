@@ -41,7 +41,7 @@ export interface PythonLayerVersionProps extends lambda.LayerVersionOptions {
  */
 export class PythonLayerVersion extends lambda.LayerVersion {
   constructor(scope: Construct, id: string, props: PythonLayerVersionProps) {
-    const compatibleRuntimes = props.compatibleRuntimes ?? [lambda.Runtime.PYTHON_3_7];
+    const compatibleRuntimes = props.compatibleRuntimes ?? [lambda.Runtime.PYTHON_3_8];
     const compatibleArchitectures = props.compatibleArchitectures ?? [lambda.Architecture.X86_64];
 
     // Ensure that all compatible runtimes are python
